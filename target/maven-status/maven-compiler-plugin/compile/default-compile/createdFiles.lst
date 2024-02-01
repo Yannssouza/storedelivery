@@ -1,0 +1,5 @@
+com\squadtop\storedelivery\service\ClienteService.class
+com\squadtop\storedelivery\repository\ClienteRepository.class
+com\squadtop\storedelivery\model\Cliente.class
+com\squadtop\storedelivery\StoredeliveryApplication.class
+com\squadtop\storedelivery\controllers\ClienteController.class
