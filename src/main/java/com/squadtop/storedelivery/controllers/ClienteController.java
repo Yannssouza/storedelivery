@@ -31,4 +31,9 @@ public class ClienteController {
       return ResponseEntity.badRequest().body("Erro ao cadastrar o cliente");
     }
   }
+
+  @GetMapping("/healthcheck")
+  public ResponseEntity<String> Healthcheck() {
+    return ResponseEntity.ok("Ok");
+  }
 }
