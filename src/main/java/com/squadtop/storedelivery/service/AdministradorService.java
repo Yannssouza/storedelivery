@@ -15,16 +15,17 @@ public class AdministradorService {
   private final CategoriaRepository categoriaRepository;
 
   public void cadastrarProduto(Produto produto) {
-    validarCategoria(produto);
-    // Nao pode salvar produto sem existir um nome
-    // Nao pode salvar produto sem existir um preco
-
+    Categoria categoria = validarCategoria(produto);
+    if (produto.getNome() == null) throw new ExecaoMensagem("O produto deve ter um nome");
+    if (produto.getPreco() == null) throw new ExecaoMensagem("O produto deve conter um preço");
+    produto.setCategoria(categoria);
     produtoRepository.save(produto);
   }
 
-  public void validarCategoria(Produto produto) {
+  public Categoria validarCategoria(Produto produto) {
     Categoria categoria = produto.getCategoria();
-    Categoria categoriaDB = categoriaRepository.findByName(categoria.getNome());
+    Categoria categoriaDB = categoriaRepository.findByNome(categoria.getNome());
     if (categoriaDB == null) throw new ExecaoMensagem("Registre uma categoria");
+    return categoriaDB;
   }
 }
