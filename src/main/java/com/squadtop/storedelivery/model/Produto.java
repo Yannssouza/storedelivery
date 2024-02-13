@@ -13,6 +13,6 @@ public class Produto {
   private Long id;
   private String nome;
   private Double preco;
-  @OneToOne(cascade = CascadeType.PERSIST)
+  @ManyToOne(cascade = CascadeType.PERSIST)
   private Categoria categoria;
 }
