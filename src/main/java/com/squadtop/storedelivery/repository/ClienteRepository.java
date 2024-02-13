@@ -1,6 +1,7 @@
-//package com.squadtop.storedelivery.repository;
-//
-//import com.squadtop.storedelivery.model.Cliente;
-//import org.springframework.data.jpa.repository.JpaRepository;
-//public interface ClienteRepository extends JpaRepository<Cliente, Long> {
-//}
+package com.squadtop.storedelivery.repository;
+
+import com.squadtop.storedelivery.model.Cliente;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ClienteRepository extends JpaRepository<Cliente, Long> {
+}
