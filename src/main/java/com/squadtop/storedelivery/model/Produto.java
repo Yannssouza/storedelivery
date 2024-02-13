@@ -4,18 +4,15 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.List;
-
+@Entity
 @Getter
 @Setter
-@Entity
-public class Cliente {
+public class Produto {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
   private String nome;
-  @OneToMany
-  private List<Endereco> endereco;
-  private String email;
-  private Long telefone;
+  private Double preco;
+  @OneToOne
+  private Categoria categoria;
 }

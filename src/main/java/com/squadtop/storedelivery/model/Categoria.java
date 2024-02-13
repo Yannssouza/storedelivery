@@ -9,13 +9,12 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
-public class Cliente {
+public class Categoria {
+  private String nome;
+
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
-  private String nome;
   @OneToMany
-  private List<Endereco> endereco;
-  private String email;
-  private Long telefone;
+  private List<Produto> produtos;
 }
