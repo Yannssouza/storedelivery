@@ -10,11 +10,8 @@ import java.util.List;
 @Setter
 @Entity
 public class Categoria {
-  private String nome;
-
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
-  @OneToMany
-  private List<Produto> produtos;
+  private String nome;
 }
