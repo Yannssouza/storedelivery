@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/pedidos")
+@RequestMapping("/api")
 public class PedidoController {
 
     @Autowired
@@ -21,8 +21,8 @@ public class PedidoController {
         return ResponseEntity.ok(pedidoRepository.findAll());
     }
 
-    @PostMapping
-    public ResponseEntity<Pedido> criandoPedido(@RequestBody Pedido pedido) {
+    @PostMapping("/cadastrar_pedido")
+    public ResponseEntity<Pedido> cadastrarPedido(@RequestBody Pedido pedido) {
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(pedidoRepository.save(pedido));
     }
