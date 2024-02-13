@@ -11,7 +11,7 @@ public class PedidoService {
 
     private final PedidoRepository pedidoRepository;
 
-    public void fazerPedido(Pedido pedido) {
+    public void cadastrarPedido(Pedido pedido) {
         pedidoRepository.save(pedido);
     }
 }
