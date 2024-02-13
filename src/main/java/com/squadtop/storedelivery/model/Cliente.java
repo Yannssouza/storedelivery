@@ -14,7 +14,7 @@ public class Cliente {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
   private String nome;
-  @OneToMany
+  @OneToMany(cascade = CascadeType.PERSIST)
   private List<Endereco> endereco;
   private String email;
   private Long telefone;
