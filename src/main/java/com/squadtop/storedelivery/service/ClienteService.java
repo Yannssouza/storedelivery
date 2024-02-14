@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class ClienteService {
-
   private final ClienteRepository clienteRepository;
 
   public void cadastrarCliente(Cliente cliente) {

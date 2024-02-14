@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class ClienteController {
   private final ClienteService clienteService;
+
   @PostMapping("/cadastrar_cliente")
   public ResponseEntity<?> cadastrarCliente(@RequestBody Cliente cliente) {
     clienteService.cadastrarCliente(cliente);
