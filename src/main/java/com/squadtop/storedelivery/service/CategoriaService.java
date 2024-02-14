@@ -12,7 +12,7 @@ public class CategoriaService {
   private final CategoriaRepository categoriaRepository;
 
   public void cadastrarCategoria(Categoria categoria) {
-    if(categoria.getNome() == null) throw new ExecaoMensagem("Deve informar o nome da categoria");
+    if (categoria.getNome() == null) throw new ExecaoMensagem("Deve informar o nome da categoria");
     categoriaRepository.save(categoria);
   }
 }

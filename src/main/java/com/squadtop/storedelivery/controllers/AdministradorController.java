@@ -14,13 +14,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 @RequiredArgsConstructor
 public class AdministradorController {
-    private final AdministradorService administradorService;
+  private final AdministradorService administradorService;
 
-    @PostMapping("/cadastrar_produto")
-    public ResponseEntity<?> cadastrarProduto(@RequestBody Produto produto) {
-        administradorService.cadastrarProduto(produto);
-        return ResponseEntity.ok("Produto Cadastrado");
-    }
-
-
+  @PostMapping("/cadastrar_produto")
+  public ResponseEntity<?> cadastrarProduto(@RequestBody Produto produto) {
+    administradorService.cadastrarProduto(produto);
+    return ResponseEntity.ok("Produto Cadastrado");
+  }
 }

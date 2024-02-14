@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 @RequiredArgsConstructor
 public class CategoriaController {
-
   private final CategoriaService categoriaService;
+
   @PostMapping("cadastrar_categoria")
   public ResponseEntity<?> cadastrarCategoria(@RequestBody Categoria categoria) {
     categoriaService.cadastrarCategoria(categoria);
